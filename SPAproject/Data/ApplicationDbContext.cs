@@ -13,5 +13,7 @@ namespace SPAproject.Data
         {
 
         }
+
+        public DbSet<GameModel> Games { get; set; }
     }
 }

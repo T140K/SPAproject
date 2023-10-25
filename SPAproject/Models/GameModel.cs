@@ -7,5 +7,7 @@
         public string User { get; set; }
         public int Answer { get; set; }
         public int GuessAmount { get; set; }
+        public bool GameFinished { get; set; } = false;
+        public DateTime Date { get; set; }
     }
 }
