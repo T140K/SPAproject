@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import GuessForm from './GuessForm';
-import authService from './AuthorizeService'
+import authService from './api-authorization/AuthorizeService'
 
 const Game = () => {
     const [gameId, setGameId] = useState(null);
