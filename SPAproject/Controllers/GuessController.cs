@@ -36,7 +36,7 @@ namespace SPAproject.Controllers
 
             if (guess < 1 || guess > 3)
             {
-                return new GuessViewModel() { Response = "Guess on numbers between 1 and 3!!" };
+                return new GuessViewModel() { Response = "Guess only numbers between 1 and 3!!" };
             }
 
             if (guess == game.Answer)

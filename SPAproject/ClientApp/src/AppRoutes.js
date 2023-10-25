@@ -1,5 +1,5 @@
 import ApiAuthorzationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
-import { Counter } from "./components/Counter";
+import Highscore from "./components/Highscore";
 import Game from "./components/Game";
 import { Home } from "./components/Home";
 
@@ -9,8 +9,8 @@ const AppRoutes = [
     element: <Home />
   },
   {
-    path: '/counter',
-    element: <Counter />
+    path: '/highscore',
+      element: <Highscore />
   },
   {
     path: '/game',
