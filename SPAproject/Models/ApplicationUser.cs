@@ -4,7 +4,7 @@ namespace SPAproject.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public string? Nickname { get; set; }
+        public string? Nick { get; set; }
 
     }
 }

@@ -82,7 +82,7 @@ namespace SPAproject.Areas.Identity.Pages.Account
 
             [Required]
             [Display(Name = "Nickname")]
-            public string Nickname { get; set; }
+            public string Nick { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -121,6 +121,7 @@ namespace SPAproject.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.Nick = Input.Nick;
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)

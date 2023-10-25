@@ -34,8 +34,14 @@ namespace SPAproject.Controllers
                 return new GuessViewModel() { Response = "This game is over already, start a new one :D" };
             }
 
+            if (guess < 1 || guess > 3)
+            {
+                return new GuessViewModel() { Response = "Guess on numbers between 1 and 3!!" };
+            }
+
             if (guess == game.Answer)
             {
+                game.GuessAmount++;
                 game.GameFinished = true;
                 _context.SaveChanges();
                 return new GuessViewModel() { Response = $"good job you got it in {game.GuessAmount} guesses"};
