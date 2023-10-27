@@ -30,7 +30,7 @@ const Statistics = () => {
                 {userStats.map((user, index) => (
                     <li key={index}>
                         Answer: {user.answer}, {user.guessCount} guesses<br />
-                        Date: {user.date}
+                        Date: {user.displayDate}
                     </li>
                 ))}
             </ul>

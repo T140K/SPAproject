@@ -42,7 +42,8 @@ namespace SPAproject.Controllers
                     User = u.User,
                     GuessCount = u.GuessAmount,
                     Answer = u.Answer,
-                    Date = u.Date.Date.ToString()
+                    DisplayDate = u.Date.Date.ToString(),
+                    Date =  u.Date
                 }).OrderByDescending(u => u.Date)
                 .ToListAsync();
 
