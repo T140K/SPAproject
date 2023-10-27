@@ -4,6 +4,6 @@
     {
         public string User { get; set; }
         public int GuessAmount { get; set; }
-        public DateTime Date { get; set; }
+        public String Date { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace SPAproject.Controllers
                     {
                         User = g.User,
                         GuessAmount = g.GuessAmount,
-                        Date = g.Date
+                        Date = g.Date.Date.ToString()
                     }).OrderBy(g => g.GuessAmount)
                     .ToListAsync(),
                 AllTime = await _context.Games
@@ -37,7 +37,7 @@ namespace SPAproject.Controllers
                     {
                         User = g.User,
                         GuessAmount = g.GuessAmount,
-                        Date = g.Date
+                        Date = g.Date.Date.ToString()
                     }).OrderBy(g => g.GuessAmount)
                     .ToListAsync(),
 

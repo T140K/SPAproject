@@ -21,7 +21,7 @@ export class NavMenu extends Component {
       collapsed: !this.state.collapsed
     });
   }
-
+    
   render() {
     return (
       <header>
@@ -39,6 +39,9 @@ export class NavMenu extends Component {
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/game">Game</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/statistics">Statistics</NavLink>
               </NavItem>
               <LoginMenu>
               </LoginMenu>
