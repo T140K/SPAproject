@@ -59,7 +59,7 @@ namespace SPAproject.Controllers
             else
             {
                 var publicId = Guid.NewGuid().ToString();
-                var answer = new Random().Next(1, 4);
+                var answer = new Random().Next(1, 101);
 
                 _context.Add(new GameModel()
                 {
