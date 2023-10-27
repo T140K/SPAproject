@@ -42,7 +42,7 @@ const Game = () => {
     return (
         <div>
             <h1>Guess the number</h1>
-            <button onClick={startNewGame}>New game</button>
+            <button onClick={startNewGame}>Play</button>
             <p>{messege}</p>
             <GuessForm onGuess={handleGuess} />
             <p>{answer}</p>

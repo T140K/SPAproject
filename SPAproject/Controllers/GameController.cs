@@ -3,9 +3,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using SPAproject.Data;
 using SPAproject.Models;
 using SPAproject.Models.ViewModels;
+using System.Linq;
 using System.Security.Claims;
 
 namespace SPAproject.Controllers
@@ -40,7 +43,7 @@ namespace SPAproject.Controllers
             var nick = user.Nick;
             if (nick == null)
             {
-                throw new ArgumentException("nick not found");
+                throw new ArgumentException("nickname not found");
             }
 
             var existingGame = _context.Games.FirstOrDefault(g => g.User == nick && !g.GameFinished);
