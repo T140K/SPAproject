@@ -33,7 +33,8 @@ const Highscore = () => {
                 <ul>
                     {highscoreAllTime.map((highscore, index) => (
                         <li key={index}>
-                            {highscore.user}- Guesses: {highscore.guessAmount}, Date: {highscore.date}
+                            {highscore.user}: {highscore.guessAmount} guesses<br />
+                            Date: {highscore.date}
                         </li>
                     ))}
                 </ul>
@@ -43,7 +44,7 @@ const Highscore = () => {
                 <ul>
                     {highscoreToday.map((highscore, index) => (
                         <li key={index}>
-                            {highscore.user}- Guesses: {highscore.guessAmount} <br/>
+                            {highscore.user}: {highscore.guessAmount} guesses<br />
                             Date: {highscore.date}
                         </li>
                     ))}

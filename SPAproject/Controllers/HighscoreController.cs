@@ -23,12 +23,12 @@ namespace SPAproject.Controllers
             var query = new HighscoreAllViewModel
             {
                 Today = await _context.Games
-                    .Where(g => g.Date == today && g.GameFinished == true)
+                    .Where(g => g.GameFinished == true && g.Date.Date == today)
                     .Select(g => new HighscoreViewModel
                     {
                         User = g.User,
                         GuessAmount = g.GuessAmount,
-                        Date = today
+                        Date = g.Date
                     }).OrderBy(g => g.GuessAmount)
                     .ToListAsync(),
                 AllTime = await _context.Games
@@ -42,9 +42,9 @@ namespace SPAproject.Controllers
                     .ToListAsync(),
 
             };
-            if (query == null)
+            if (query.Today.Count == 0 && query.AllTime.Count == 0)
             {
-                throw new ArgumentException("highscores not working");
+                throw new ArgumentException("no highscores found");
             }
 
             return query;
